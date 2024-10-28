@@ -1,0 +1,50 @@
+.bg-light {
+    background-image: url('https://images.unsplash.com/photo-1507919909716-c8262e491cde?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size:10;
+    background-position: center;
+}
+
+.hero-section {
+    padding: 150px 0; /* Adjust padding to move content below navbar */
+    height: 100vh; /* Ensure the hero section takes up the full viewport height */
+    text-align: center;
+    background-image: url('your-image-path.jpg'); /* Add your image path */
+    background-size: cover; /* Make sure the image covers the whole section */
+    background-position: center; /* Center the image */
+    color: white; /* Ensure the text is readable over the image */
+    position: relative; /* Make sure it's not interfering with the navbar */
+}
+  
+  nav.navbar {
+    background-color: #f8f9fa; /* Solid background color for navbar */
+    z-index: 1000; /* Make sure navbar stays on top */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+  
+  body {
+    margin-top: 56px; /* This should equal the height of the navbar to avoid overlap */
+}
+  
+  
+  .hero-section h1 {
+    font-size: 4rem; /* Increase the size of the main heading */
+    font-weight: bold;
+}
+  
+  .hero-section p {
+    font-size: 1.5rem; /* Increase the size of the subtext */
+    margin-top: 20px;
+}
+  
+.welcome-text {
+    font-size: 3rem; /* Increase font size */
+    font-weight: bold;
+    margin-top: 100px; /* Add margin to separate from the navbar */
+}
+
+.welcome-subtext {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}

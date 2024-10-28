@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifestyle Theme</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Navbar Styles */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar ul li {
+    display: inline;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .navbar ul li a:hover {
+    color: #007bff;
+  }
+
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #f8f9fa;
+      padding: 10px;
+      border: 1px solid #ddd;
+      width: 150px;
+    }
+
+    .navbar ul.show {
+      display: flex;
+    }
+
+    .navbar-toggler {
+      display: inline-block;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  /* Atur ukuran gambar yang sama untuk wellness dan fashion sections */
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Hover effect for entire section */
+  a.card-wrapper {
+    text-decoration: none; /* Remove underline on hover */
+    color: inherit; /* Ensure text color remains the same */
+    display: block;
+  }
+
+  /* Hover effect for cards */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit; /* Make sure text color is inherited */
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Make sure no underline in card text */
+  .card-body a {
+    text-decoration: none;
+  }
+
+  .card-body a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Custom Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Lifestyle</div>
+    <ul id="navbar-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <!-- Changed the Subscribe item to a button linking to the section -->
+      <li><a href="#subscribe-section">Subscribe</a></li>
+    </ul>
+    <span class="navbar-toggler" onclick="toggleNavbar()">&#9776;</span>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero text-white text-center py-5" style="background-image: url('https://images.unsplash.com/photo-1507919909716-c8262e491cde?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+    <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+      <h1>Welcome to Our Lifestyle Blog</h1>
+      <p>Discover the latest trends in wellness and fashion</p>
+    </div>
+  </section>
+  <!-- Lifestyle Hub Section (New Content) -->
+  <section class="lifestyle-hub text-left py-5">
+    <div class="container">
+      <h2>Welcome to the Lifestyle Hub</h2>
+      <p class="lead">Explore trends, wellness, and living your best life</p>
+      <p>Lifestyle is all about finding balance, embracing health, and living in the moment. Whether you're into fitness, mindfulness, or just looking to elevate your daily routines, you've come to the right place.</p>
+    </div>
+  </section>
+
+  <body>
+    <!-- Wellness Section -->
+    <section class="wellness my-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Wellness & Fitness</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <!-- Bungkus seluruh card dengan link -->
+            <a href="https://www.liputan6.com/health/read/5761133/cara-mudah-tentukan-usia-fisik-tanpa-alat-bisa-dicoba-di-rumah" class="card-wrapper" target="_blank">
+              <div class="card">
+                <img src="https://rspj.ihc.id/uploads/img_post/img_240120241706069368EO9M8.jpg" class="card-img-top" alt="wellness 1">
+                <div class="card-body">
+                  <h5 class="card-title">Wellness News 1</h5>
+                  <p class="card-text">Cara Mudah Tentukan Usia Fisik Tanpa Alat, Bisa Dicoba di Rumah</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.liputan6.com/lifestyle/read/5758881/6-manfaat-rahasia-berolahraga-bareng-teman-yang-jarang-diketahui" class="card-wrapper" target="_blank">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1614664558/attached_image/beragam-manfaat-olahraga.jpg" class="card-img-top" alt="wellness 2">
+                <div class="card-body">
+                  <h5 class="card-title">Wellness News 2</h5>
+                  <p class="card-text">6 Manfaat Rahasia Berolahraga Bareng Teman yang Jarang Diketahui!</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.liputan6.com/health/read/5761127/dokter-ungkap-3-tanda-jantung-lemah-salah-satunya-kesulitan-bernapas-saat-jalan" class="card-wrapper" target="_blank">
+              <div class="card">
+                <img src="https://ik.imagekit.io/tvlk/blog/2024/01/g1WgKaYh-image.jpeg?tr=dpr-2,w-675" class="card-img-top" alt="wellness 3">
+                <div class="card-body">
+                  <h5 class="card-title">Wellness News 3</h5>
+                  <p class="card-text">Dokter Ungkap 3 Tanda Jantung Lemah, Salah Satunya Kesulitan Bernapas Saat Jalan</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Fashion Section -->
+    <section class="fashion bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Latest Fashion Trends</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <a href="https://www.liputan6.com/hot/read/5742730/punya-fashion-yang-ikonik-ini-4-pesona-rania-yamin-dalam-berbagai-kombinasi-warna-kebaya" class="card-wrapper" target="_blank">
+              <div class="card">
+                <img src="https://www.lofficielmalaysia.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F55615%2F1708478664-hoshi-yujin-gulf-somi-milan-fashion-diesel-onitsuka-fendi-prada.jpg%3Fauto%3Dformat%252Ccompress%26cs%3Dsrgb&w=3840&q=75" class="card-img-top" alt="fashion 1">
+                <div class="card-body">
+                  <h5 class="card-title">Fashion Trend 1</h5>
+                  <p class="card-text">Punya Fashion yang Ikonik, Ini 4 Pesona Rania Yamin dalam Berbagai Kombinasi Warna Kebaya</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.liputan6.com/hot/read/5726851/tren-fashion-coquette-girl-5-ide-outfit-yang-wajib-dicoba" class="card-wrapper" target="_blank">
+              <div class="card">
+                <img src="https://d27fp5ulgfd7w2.cloudfront.net/wp-content/uploads/2022/10/14144001/Asian-Fashion-Influencers-1920x1080-1-1024x576.jpg" class="card-img-top" alt="fashion 2">
+                <div class="card-body">
+                  <h5 class="card-title">Fashion Trend 2</h5>
+                  <p class="card-text">Tren Fashion Coquette Girl, 5 Ide Outfit yang Wajib Dicoba</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.liputan6.com/hot/read/5669791/10-tanda-penampilanmu-positif-dan-menarik-di-mata-banyak-orang-jadi-inspirasi-fashion" class="card-wrapper" target="_blank">
+              <div class="card">
+                <img src="https://cdn.tatlerasia.com/tatlerasia/i/2024/07/03173617-korean-street-style_cover_1024x683.jpg" class="card-img-top" alt="fashion 3">
+                <div class="card-body">
+                  <h5 class="card-title">Fashion Trend 3</h5>
+                  <p class="card-text">10 Tanda Penampilanmu Positif dan Menarik di Mata Banyak Orang, Jadi Inspirasi Fashion</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- Testimonials Section (New Feature) -->
+  <section class="testimonials my-5">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our Readers Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                  <p class="card-text">"This blog has changed my life! The wellness tips are spot on."</p>
+                  <h5 class="card-title">- Jane Doe</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                  <p class="card-text">"I love the fashion section! Always on trend."</p>
+                  <h5 class="card-title">- John Smith</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscription Form Section -->
+  <section id="subscribe-section" class="subscribe bg-light text-dark text-center py-5">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form id="subscribeForm" onsubmit="return validateEmail()">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <input type="email" id="email" class="form-control my-2" placeholder="Enter your email" required>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-dark">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Lifestyle Blog. All rights reserved.</p>
+    <p><a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    // Toggle navbar for mobile view
+    function toggleNavbar() {
+      var navbarLinks = document.getElementById('navbar-links');
+      navbarLinks.classList.toggle('show');
+    }
+
+    // Email validation and form submission
+    function validateEmail() {
+      var email = document.getElementById('email').value;
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+      if (emailPattern.test(email)) {
+        alert("Thank you for reaching out! We'll get back to you shortly!");
+        return true; // Form submission happens
+      } else {
+        alert("Please enter a valid email address.");
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
